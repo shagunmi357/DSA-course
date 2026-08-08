@@ -1,13 +1,20 @@
 #include <iostream>
 using namespace std;
-int main(){
+
+int main() {
     int n;
-    cout << "Enter a Number"<< endl;
-    cin>>n;
-    for(int i = 1 ; i< n ; i++){
-        if(n % i == 0){
+    cout << "Enter a Number: ";
+    cin >> n;
+
+    for (int i = 1; i * i <= n; i++) {
+        if (n % i == 0) {
             cout << i << " ";
+
+            if (i != n / i) {
+                cout << n / i << " ";
+            }
         }
     }
+
     return 0;
 }
